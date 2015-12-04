@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tvv!++er</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if current_user != nil %>
+  <nav class="bg_<%= current_user.color %>">
+<% else %>
+  <nav>
+<% end %>
+  <h1><a href="./">Tvv!++er</a></h1>
+
+  <div id="login">
+    <% if current_user != nil %>
+      <h2><%= current_user.name %> でログインしています</h2>
+    <% else %>
+      <% if @msg != nil %>
+        <h2><%= @msg %></h2>
+      <% end %>
+    <% end %>
+    <% if current_user == nil %>
+      <%= form_tag login_path do %>
+        ユーザ<%= text_field_tag :name, params[:name] %>
+        パスワード<%= password_field_tag :pass, params[:pass] %>
+        <%= submit_tag "ログイン" %>
+      <% end %>
+    <% else %>
+      <%= button_to 'ログアウト', login_path, :method => :delete, :data => { :confirm => '本当にログアウトしますか？'  } %>
+    <% end %>
+  </div>
+</nav>
+
+<div id="wrapper">
+
+  <%= yield %>
+
+</div>
+
+</body>
+</html>

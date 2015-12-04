@@ -1,0 +1,22 @@
+<%= form_for @user do |f| %>
+  <!-- エラー処理 -->
+  <% @user.errors.full_messages.each do |message| %>
+    <p class="error"><%= message %></p>
+  <% end %>
+
+  <table class="newuser">
+    <tr>
+      <td>名前</td><td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td>色</td><td><%= f.select :color, User.colors %></td>
+    </tr>
+    <tr>
+      <td>パスワード</td><td><%= f.password_field :password %></td>
+    </tr>
+    <tr>
+      <td>パスワード（確認）</td><td><%= f.password_field :password_confirmation %>
+    </tr>
+  </table>
+  <%= f.submit "作成", :class => "wide_button" %>
+<% end %>
