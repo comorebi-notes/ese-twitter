@@ -13,5 +13,8 @@ class User < ActiveRecord::Base
   end
 
   validates :name, presence: true
+  validates :password,
+  length: { minimum: 4, maximum: 10 }
+
   has_secure_password
 end
