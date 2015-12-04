@@ -167,32 +167,32 @@ ul.posts li {
   margin: 0 0 20px 0;
 }
 
-.border_red { border-color: #c53; }
-.bg_red { background-color: #c53; }
+.border_red { border-color: #c53 !important; }
+.bg_red { background-color: #c53 !important; }
 .bg_red:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #c53; }
 
-.border_blue { border-color: #27c; }
-.bg_blue { background-color: #27c; }
+.border_blue { border-color: #27c !important; }
+.bg_blue { background-color: #27c !important; }
 .bg_blue:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #27c; }
 
-.border_green { border-color: #693; }
-.bg_green { background-color: #693; }
+.border_green { border-color: #693 !important; }
+.bg_green { background-color: #693 !important; }
 .bg_green:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #693; }
 
-.border_purple { border-color: #a59; }
-.bg_purple { background-color: #a59; }
+.border_purple { border-color: #a59 !important; }
+.bg_purple { background-color: #a59 !important; }
 .bg_purple:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #a59; }
 
-.border_brown { border-color: #752; }
-.bg_brown { background-color: #752; }
+.border_brown { border-color: #752 !important; }
+.bg_brown { background-color: #752 !important; }
 .bg_brown:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #752; }
 
-.border_gray { border-color: #666; }
-.bg_gray { background-color: #666; }
+.border_gray { border-color: #666 !important; }
+.bg_gray { background-color: #666 !important; }
 .bg_gray:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #666; }
 
-.border_lime { border-color: #3a5; }
-.bg_lime { background-color: #3a5; }
+.border_lime { border-color: #3a5 !important; }
+.bg_lime { background-color: #3a5 !important; }
 .bg_lime:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #3a5; }
 
 .post {

@@ -8,7 +8,7 @@
   <!-- 入力フォーム -->
   <% if current_user != nil %>
     <%= f.text_area :text, :class => "border_"+current_user.color %>
-    <p><%= f.submit "つぶやく", :class => "newpost" %></p>
+    <p><%= f.submit "つぶやく", :class => "newpost bg_"+current_user.color %></p>
   <% else %>
     <%= link_to "新しくユーザを作成する", new_user_path, :class => "newpost" %>
   <% end %>
