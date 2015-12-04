@@ -12,8 +12,12 @@ class PostsController < ApplicationController
 
   def create
     @user = User.find(current_user)
-  	@post = @user.posts.create(post_params)
-    redirect_to root_path
+  	@post = @user.posts.new(post_params)
+    if @post.save
+      redirect_to root_path
+    else
+      render "index"
+    end
   end
 
   def destroy
