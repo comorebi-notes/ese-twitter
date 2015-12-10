@@ -13,7 +13,8 @@
 <% else %>
   <nav>
 <% end %>
-  <h1><a href="./">Tvv!++er</a></h1>
+
+  <h1><%= link_to 'Tvv!++er', root_path %></h1>
 
   <div id="login">
     <% if current_user != nil %>
