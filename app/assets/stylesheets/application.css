@@ -14,6 +14,9 @@
  *= require_self
  */
 
+
+/* ----------共通タグ---------- */
+
 body {
   color: #222;
   line-height: 16px;
@@ -34,111 +37,9 @@ a,img{
 }
 
 a:hover,
-a:active{
-	opacity: 0.6;
-}
-
+a:active,
 input[type="submit"]:hover {
-  opacity: 0.6;
-}
-
-nav {
-  position: fixed !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background-color: #29c;
-  margin: 0;
-  padding: 0;
-  z-index: 100;
-}
-
-nav h1 {
-  float: left;
-  margin: 0;
-  padding: 25px;
-}
-
-nav h1 a {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #fff;
-}
-
-nav div#login {
-  float: right;
-  color: #fff;
-  padding: 8px;
-  text-align: right;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: normal;
-  vertical-align: middle;
-  margin: 0 10px 0 0;
-}
-
-nav h2 {
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  display: inline;
-}
-
-nav div#login input[type="text"],
-nav div#login input[type="password"] {
-  height: 14px;
-  width: 80px;
-  margin: 0 6px 0 4px;
-}
-
-#wrapper {
-  position: relative;
-  width: 800px;
-  margin: 100px auto;
-}
-
-.newpost {
-  font-size: 12px;
-}
-
-th {
-  width: 100px;
-  padding: 6px 0;
-  font-weight: normal;
-  text-align: left;
-}
-
-textarea {
-  width: 100%;
-  height: 200px;
-  line-height: 18px;
-  border: 1px solid #29c;
-}
-
-input.newpost,
-a.newpost,
-.wide_button {
-  display: block;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2em;
-  background-color: #29c;
-  color: #fff;
-  border-style: none;
-  border-radius: 8px;
-  margin: 10px 0 40px 0;
-}
-
-input.newpost { background-color: #29c; }
-a.newpost { background-color: #f44; }
-
-input.button:active {
-  top: 2px;
+	opacity: 0.6;
 }
 
 .error {
@@ -146,26 +47,12 @@ input.button:active {
   font-weight: bold;
 }
 
-.newuser input[type="text"],
-.newuser input[type="password"],
-.newuser select {
-  width: 200px;
+input:active,
+a:active {
+  top: 2px;
 }
 
-.newuser td {
-  height: 20px;
-  padding: 5px; 0
-}
-
-ul.posts {
-  list-style: none;
-  margin: 80px 0 0 0;
-  padding: 0;
-}
-
-ul.posts li {
-  margin: 0 0 20px 0;
-}
+/* ----------各色タグ---------- */
 
 .border_red { border-color: #c53 !important; }
 .bg_red { background-color: #c53 !important; }
@@ -195,13 +82,115 @@ ul.posts li {
 .bg_lime { background-color: #3a5 !important; }
 .bg_lime:after { content: ""; position: absolute; top: 20px; left: 100%; border: 12px solid transparent; border-left: 12px solid #3a5; }
 
+/* ----------個別タグ---------- */
+
+#container {
+  position: relative;
+  width: 800px;
+  margin: 100px auto;
+}
+
+nav {
+  position: fixed !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #29c;
+  z-index: 100;
+}
+
+nav h1 {
+  float: left;
+  margin: 0;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+nav h1 a {
+  color: #fff;
+}
+
+nav #login {
+  float: right;
+  color: #fff;
+  padding: 8px;
+  text-align: right;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: normal;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}
+
+nav #login h2 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+nav #login input[type="text"],
+nav #login input[type="password"] {
+  height: 14px;
+  width: 80px;
+  margin: 0 6px 0 4px;
+}
+
+.newpost textarea {
+  width: 100%;
+  height: 200px;
+  line-height: 18px;
+  border: 1px solid #29c;
+}
+
+.newpost input,
+.newpost a,
+.wide_button {
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #29c;
+  color: #fff;
+  border-style: none;
+  border-radius: 8px;
+  margin: 10px 0 40px 0;
+}
+
+a.newuser { background-color: #f44; }
+
+.newuser input[type="text"],
+.newuser input[type="password"],
+.newuser select {
+  width: 200px;
+}
+
+.newuser td {
+  height: 20px;
+  padding: 5px; 0
+}
+
+.posts {
+  list-style: none;
+  margin: 80px 0 0 0;
+  padding: 0;
+}
+
+.posts li {
+  margin: 0 0 20px 0;
+}
+
 .post {
   position: relative;
   width: 100%;
   border-width: 1px;
   border-style: solid;
-  margin: 0;
-  padding: 0;
   overflow: auto;
 }
 
@@ -211,7 +200,6 @@ ul.posts li {
   bottom: 0;
   width: 200px;
   color: #fff;
-  padding: 0;
   text-align: center;
 }
 
@@ -222,21 +210,6 @@ ul.posts li {
   margin: -0.5em 0 0 0;
   padding: 0;
   text-align: center;
-}
-
-div.delete {
-  float: right;
-  margin: 24px 24px 0 0;
-}
-
-div.delete input[type="submit"] {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 14px;
-  color: #fff;
-  padding: 18px;
-  border-radius: 4px;
-  border-style: none;
 }
 
 .post_text {
@@ -258,4 +231,19 @@ div.delete input[type="submit"] {
 .post_text p.date {
   margin: 20px 0 0 0;
   font-size: 10px;
+}
+
+.delete {
+  float: right;
+  margin: 24px 24px 0 0;
+}
+
+.delete input[type="submit"] {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+  padding: 18px;
+  border-radius: 4px;
+  border-style: none;
 }

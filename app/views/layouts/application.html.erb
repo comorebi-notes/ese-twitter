@@ -24,6 +24,7 @@
         <h2><%= @msg %></h2>
       <% end %>
     <% end %>
+
     <% if current_user == nil %>
       <%= form_tag login_path do %>
         ユーザ<%= text_field_tag :name, params[:name] %>
@@ -36,7 +37,7 @@
   </div>
 </nav>
 
-<div id="wrapper">
+<div id="container">
 
   <%= yield %>
 

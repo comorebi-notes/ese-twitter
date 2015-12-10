@@ -6,12 +6,14 @@
   <% end %>
 
   <!-- 入力フォーム -->
-  <% if current_user != nil %>
-    <%= f.text_area :text, :class => "border_"+current_user.color %>
-    <p><%= f.submit "つぶやく", :class => "newpost bg_"+current_user.color %></p>
-  <% else %>
-    <%= link_to "新しくユーザを作成する", new_user_path, :class => "newpost" %>
-  <% end %>
+  <div class="newpost">
+    <% if current_user != nil %>
+      <%= f.text_area :text, :class => "border_"+current_user.color %>
+      <p><%= f.submit "つぶやく", :class => "bg_"+current_user.color %></p>
+    <% else %>
+      <%= link_to "新しくユーザを作成する", new_user_path, :class => "newuser" %>
+    <% end %>
+  </div>
 <% end %>
 
 <!-- Post一覧 -->
@@ -21,6 +23,7 @@
 
     <li>
       <div class="post border_<%= user.color %>">
+
         <!-- キャプション -->
         <div class="post_caption bg_<%= user.color %>">
           <h2><%= user.name %></h2>
@@ -40,6 +43,7 @@
             <% end %>
           </div>
         <% end %>
+        
       </div>
     </li>
   <% end %>
