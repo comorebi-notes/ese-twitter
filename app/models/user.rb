@@ -12,7 +12,10 @@ class User < ActiveRecord::Base
     [ "lime",   "lime"]]
   end
 
-  validates :name, presence: true
+  validates :name,
+  presence: true,
+  length: { minimum: 4, maximum: 10 }
+
   validates :password,
   length: { minimum: 4, maximum: 10 }
 
