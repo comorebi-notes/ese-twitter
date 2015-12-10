@@ -196,8 +196,7 @@ ja:
 
 
   attributes:
-    subject: 題名
-    name: 投稿者
+    name: 名前
     text: 内容
     password: パスワード
     password_confirmation: パスワード確認
