@@ -36,12 +36,14 @@
         </div>
 
         <!-- 削除ボタン -->
-        <% if current_user == user %>
-          <div class="delete">
-            <%= form_for post, :url => post_path(post.id), :html => { :method => :delete } do |f| %>
-              <span><%= f.submit "削除", :class => "bg_"+user.color , :data => { :confirm => '本当に削除しますか？' } %></span>
-            <% end %>
-          </div>
+        <% if current_user != nil %>
+          <% if current_user == user || current_user.name == "admin" %>
+            <div class="delete">
+              <%= form_for post, :url => post_path(post.id), :html => { :method => :delete } do |f| %>
+                <span><%= f.submit "削除", :class => "bg_"+user.color , :data => { :confirm => '本当に削除しますか？' } %></span>
+              <% end %>
+            </div>
+          <% end %>
         <% end %>
 
       </div>
