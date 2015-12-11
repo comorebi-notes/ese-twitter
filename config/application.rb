@@ -26,5 +26,6 @@ module Samplebbs
     config.active_record.default_timezone = :local
 
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.initialize_on_precompile = false
   end
 end
