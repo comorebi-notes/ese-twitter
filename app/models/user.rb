@@ -2,15 +2,17 @@ class User < ActiveRecord::Base
   has_many :posts
   # self.primary_key = "name"
 
-  def self.colors
-    [["red",    "red"],
-    [ "blue",   "blue"],
-    [ "green",  "green"],
-    [ "purple", "purple"],
-    [ "brown",  "brown"],
-    [ "gray",   "gray"],
-    [ "lime",   "lime"]]
-  end
+  # def self.colors
+  #   [["red",    "red"],
+  #   [ "blue",   "blue"],
+  #   [ "green",  "green"],
+  #   [ "purple", "purple"],
+  #   [ "brown",  "brown"],
+  #   [ "gray",   "gray"],
+  #   [ "lime",   "lime"]]
+  # end
+
+  enum color: %i(red blue green purple brown gray lime)
 
   validates :name,
   presence: true,
