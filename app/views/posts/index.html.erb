@@ -31,7 +31,7 @@
 
         <!-- 本文 -->
         <div class="post_text">
-          <p><%= simple_format(h(post.text)) %></p>
+          <%= simple_format(h(post.text)) %>
           <p class="date"><%= post.created_at %></p>
         </div>
 
