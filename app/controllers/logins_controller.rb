@@ -1,5 +1,6 @@
 class LoginsController < ApplicationController
   def create
+    reset_session
     if params.key?(:name) || params.key?(:pass)
       user = User.find_by_name params[:name]
       if user && user.authenticate(params[:pass])
