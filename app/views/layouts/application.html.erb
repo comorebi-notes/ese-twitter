@@ -20,8 +20,11 @@
     <% if current_user != nil %>
       <h2><%= current_user.name %> でログインしています</h2>
     <% else %>
-      <% if @msg != nil %>
-        <h2><%= @msg %></h2>
+      <% if notice %>
+        <h2><%= flash[:notice] %></h2>
+      <% end %>
+      <% if alert %>
+        <h2><%= flash[:alert] %></h2>
       <% end %>
     <% end %>
 

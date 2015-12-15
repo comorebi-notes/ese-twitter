@@ -8,14 +8,7 @@ class LoginsController < ApplicationController
         redirect_to root_path
       else
         session[:user_id] = nil
-        @msg = 'ユーザまたはパスワードが間違っています'
-
-        # ここには書きたくない3行
-        @post = Post.new
-        @posts = Post.all
-        @posts = Post.order("id").reverse_order
-
-        render template: "posts/index"
+        redirect_to root_path, alert: 'ユーザまたはパスワードが間違っています'
       end
     end
   end
